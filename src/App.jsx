@@ -20,6 +20,7 @@ import PropsDemo from './components/PropsDemo';
 
 import { Moduleuse } from './components/Moduleuse';
 import Lifecycle from './components/Lifecycle';
+import LoadData from './components/LoadData';
 
 function App() {
   const [state,setState]=useState("Something from appp");
@@ -112,13 +113,15 @@ const fn=(value)=>{
      </div>
 
    <Moduleuse/>
+   <Lifecycle/>
 
       <Footer/>
 
          */
       }
 
-<Lifecycle/>
+
+<LoadData/>
    
 
     
