@@ -1,6 +1,11 @@
 import { useState,useEffect } from 'react'
 import logo from './logo.svg'
-import './App.css'
+import './App.css';
+import {
+
+  Routes,
+  Route,
+} from "react-router-dom";
 
 // What is react ?
 
@@ -21,6 +26,7 @@ import PropsDemo from './components/PropsDemo';
 import { Moduleuse } from './components/Moduleuse';
 import Lifecycle from './components/Lifecycle';
 import LoadData from './components/LoadData';
+import Doubt from "./components/Doubt";
 
 function App() {
   const [state,setState]=useState("Something from appp");
@@ -115,14 +121,21 @@ const fn=(value)=>{
    <Moduleuse/>
    <Lifecycle/>
 
+   <LoadData/>
       <Footer/>
-
+ <Doubt/>
          */
       }
+  <Header/>
+<Routes>
 
+<Route path="/" element={ <Home/>}/>
+      <Route path="/data" element={ <LoadData/>}/>
+      <Route path="/login" element={ <Login/>}/>
+     
+    </Routes>
 
-<LoadData/>
-   
+  
 
     
     </div>
