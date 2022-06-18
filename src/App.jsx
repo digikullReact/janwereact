@@ -27,6 +27,8 @@ import { Moduleuse } from './components/Moduleuse';
 import Lifecycle from './components/Lifecycle';
 import LoadData from './components/LoadData';
 import Doubt from "./components/Doubt";
+import Lifecycle2 from './components/Lifecycle2';
+import Classlifecycle from './components/Classlifecycle';
 
 function App() {
   const [state,setState]=useState("Something from appp");
@@ -132,6 +134,8 @@ const fn=(value)=>{
 <Route path="/" element={ <Home/>}/>
       <Route path="/data" element={ <LoadData/>}/>
       <Route path="/login" element={ <Login/>}/>
+      <Route path="/lifecycle2" element={<Lifecycle2/>}/>
+      <Route path="/class" element={<Classlifecycle/>}/>
      
     </Routes>
 
