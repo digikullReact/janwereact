@@ -10,6 +10,8 @@ import React, { Component } from 'react'
             name:""
         }
 
+        console.log("constructor");
+
        // this.updateMethod=this.updateMethod.bind(this);
     }
 
@@ -30,10 +32,12 @@ import React, { Component } from 'react'
     }
 
     componentWillUnmount(){
+        console.log("Class component unmounted");
         // is used to visualize unmounting phase of a component
     }
 
     updateMethod=()=>{
+       // console.log("In arrow",this);
 
         this.setState({
             name:"Something else"
@@ -45,7 +49,8 @@ import React, { Component } from 'react'
 
   render() {
     return (
-      <div>Classlifecycle
+      <div style={{backgroundColor:"green"}}>
+        <h1>Class Component</h1>
 
      <button onClick={this.updateMethod}>
 

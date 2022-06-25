@@ -29,6 +29,7 @@ import LoadData from './components/LoadData';
 import Doubt from "./components/Doubt";
 import Lifecycle2 from './components/Lifecycle2';
 import Classlifecycle from './components/Classlifecycle';
+import Protectedroute from './components/Protectedroute';
 
 function App() {
   const [state,setState]=useState("Something from appp");
@@ -132,9 +133,28 @@ const fn=(value)=>{
 <Routes>
 
 <Route path="/" element={ <Home/>}/>
-      <Route path="/data" element={ <LoadData/>}/>
+     {/**<Route path="/data" element={ <LoadData/>}/> */} 
+
+      <Route
+            exact
+            path="/data"
+            element={
+              <Protectedroute>
+              <Home/>
+              </Protectedroute>
+            }
+          />
       <Route path="/login" element={ <Login/>}/>
-      <Route path="/lifecycle2" element={<Lifecycle2/>}/>
+      <Route
+            exact
+            path="/lifecycle2"
+            element={
+              <Protectedroute>
+               <Lifecycle2/>
+              </Protectedroute>
+            }
+          />
+    {/**   <Route path="/lifecycle2" element={   <Lifecycle2/>}/>*/} 
       <Route path="/class" element={<Classlifecycle/>}/>
      
     </Routes>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
+import Classlifecycle from './Classlifecycle';
 import Unmounting from './Unmounting';
 
 function Lifecycle2() {
@@ -73,10 +74,11 @@ function Lifecycle2() {
        <h1>State Value- {state}</h1> 
 
        <h1>Input  Value- {state}</h1> 
-
+{/**<Unmounting/>* */} 
        {
+        
 
-        show ?       <Unmounting/> :""
+        show ?       <Classlifecycle/> :""
 
        }
 
